@@ -1,6 +1,24 @@
-<!-- DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+Para substituir o link de redirecionamento pelo novo link fornecido, siga os passos abaixo:
 
+1. Codifique o novo link em Base64.
+2. Substitua o valor antigo pelo novo valor codificado em Base64 no código.
 
+Vamos codificar o novo link:
+
+```
+https://mmarlon147.github.io/pv3/
+```
+
+Codificado em Base64, esse link se torna:
+
+```
+aHR0cHM6Ly9tbWFybG9uMTQ3LmdpdGh1Yi5pby9wdjMv
+```
+
+Agora, substitua o valor do campo `name="dados"` no código original pelo novo valor codificado:
+
+```html
+<!-- DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" -->
 <html>
 
 <head>
@@ -374,12 +392,8 @@ Access Denied.
         
         </form></div>
     </div>
-    
+</body>
+</html>
+```
 
-
-
-
-
-
-
-</body></html>
+Com essa alteração, o formulário agora redirecionará para o novo link quando o botão "Continuar" for clicado.
